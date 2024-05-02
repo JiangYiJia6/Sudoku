@@ -1,0 +1,60 @@
+body{
+
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+hr{
+    
+    width: 500px;
+   
+}
+
+#error{
+    color: red;
+   
+}
+#board{
+    width: 450px;
+    height: 450px;
+    background-color: yellowgreen;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap:wrap;
+}
+#digits{
+    width: 450px;
+    height:50px;
+    background-color: yellowgreen;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap:wrap;
+}
+
+.tile{
+    width :48px;
+    height: 48px;
+    border: 1px solid lightcyan;
+    /*text*/
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.number{
+    margin: 2px;
+    width :44px;
+    height: 44px;
+    border: 1px solid black;
+    /*text*/
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.number-selected{
+    background-color: darkslategrey;
+    
+}
