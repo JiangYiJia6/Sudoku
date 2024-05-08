@@ -2,6 +2,7 @@ var numSelected = null;
 var tileSelected = null;
 
 var error=null;
+
 var board=[
     "--74916-5",
     "2---6-3-9",
@@ -48,6 +49,15 @@ function setGame(){
             if(board[r][c]!="-")
             {
                 tile.innerText=board[r][c];
+                tile.classList.add("tile-start")
+            }
+            if(r==2||r==5)
+            {
+                tile.classList.add("horizontal-line")
+            }
+            if(c==2||c==5)
+            {
+                tile.classList.add("vertical-line")
             }
             tile.classList.add("tile");
             tile.addEventListener("click",selectTile)
@@ -71,6 +81,18 @@ function selectTile(tile){
         if(this.innerText!=""){
             return;
         }
-        this.innerText=numSelected.id;
+       
+
+        let coords=this.id.split("-");
+        let r=parseInt(coords[0]);
+        let c=parseInt(coords[1]);
+
+        if(solution[r][c] == numberSelected.id){
+            this.innerText=numberSelected.id;
+        }
+        else{
+            error +=1;
+            document.getElementById("error").innerText=error;
+        }
     }
 }

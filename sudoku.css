@@ -58,3 +58,15 @@ hr{
     background-color: darkslategrey;
     
 }
+
+.tile-start{
+    background-color: lightcyan;
+}
+
+.horizontal-line{
+    border-bottom: 1px solid yellow;
+}
+
+.vertical-line{
+    border-right: 1px solid yellow;
+}
